@@ -1,11 +1,11 @@
 
-FAHRENHEIT_TO_CELSIUS_FACTOR = (5/9)
-CELSIUS_TO_FAHRENHEIT_FACTOR = (9/5)
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 def convert_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR 
+    return (fahrenheit - 32) * (FAHRENHEIT_TO_CELSIUS_FACTOR )
 def convert_to_fahrenheit(celsius):
-    return (celsius * (9/5)) + CELSIUS_TO_FAHRENHEIT_FACTOR
+    return (celsius * (CELSIUS_TO_FAHRENHEIT_FACTOR)) + 32
 
 
 def main():
@@ -19,9 +19,9 @@ def main():
         return
     match temp_unit:
             case "f":
-                print(f"{temp} is {convert_to_celsius(temp)}")
+                print(f"{parsed_temp} is {convert_to_celsius(parsed_temp):.2f}°C")
             case "c":
-                print(f"{temp} is {convert_to_fahrenheit(temp)}")
+                print(f"{parsed_temp} is {convert_to_fahrenheit(parsed_temp):.2f}°F")
             case _:
                 print("Error: Invalid unit specified. Please enter 'C' or 'F'.")
 
