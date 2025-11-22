@@ -1,14 +1,14 @@
 from datetime import datetime,timedelta
 
 def display_current_datetime():
-    current_date = datetime.now().strftime("%y-%m-%d-%H-%M-%S")
+    current_date = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
     print(current_date)
 
 def calculate_future_date(days):
     current_date = datetime.now()
 
     future_date = current_date + timedelta(days=days)
-    return future_date.strftime("%y-%m-%d-%H-%M-%S")
+    return future_date.strftime("%Y-%m-%d-%H:%M:%S")
 
 
 def main():
