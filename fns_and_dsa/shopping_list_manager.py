@@ -14,13 +14,13 @@ def main():
 
         if choice == '1':
             # Prompt for and add an item
-            new_item = input("enter you item to add to cart: ")
+            new_item = input("Enter the item to add: ")
             shopping_list.append(new_item)
-            print (f"added {new_item} to shopping_list")
+            print (f"added [{new_item}] to shopping_list")
             pass
         elif choice == '2':
             # Prompt for and remove an item
-            remove_item = input("enter you item to remove from the cart: ")
+            remove_item = input("Enter the item to remove: ")
             shopping_list.remove(remove_item)
             print(f"item {remove_item} removed from shopping_list")
 
