@@ -11,9 +11,6 @@ class Book:
     def __str__(self):
         return f"Book: {self.title} by {self.author}"
 
-    def __del__(self):
-        print(f"Deleting Book {self.title}")
-
 
 class EBook(Book):
     """Docstring for EBook"""
@@ -24,9 +21,6 @@ class EBook(Book):
 
     def __str__(self):
         return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
-
-    def __del__(self):
-        print(f"Deleting EBook {self.title}")
 
 
 class PrintBook(Book):
@@ -42,9 +36,6 @@ class PrintBook(Book):
         return (
             f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
         )
-
-    def __del__(self):
-        print(f"Deleting PrintBook {self.title}")
 
 
 class Library:
